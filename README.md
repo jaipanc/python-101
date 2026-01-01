@@ -648,7 +648,362 @@ for fruit in fruits:
 for i in range(len(fruits)):
     print(f"{i}: {fruits[i]}")
 
-# Loop with enumerate (recommended)
-for i, fruit in enumerate(fruits):
-    print(f"{i}: {fruit}")
+# Python Programming Learning Guide - Data Structures (Continued)
+
+## Data Structures
+
+### Intro to Sets
+```python
+# Unordered collection of unique items
+fruits = {"apple", "banana", "cherry"}
+print(fruits)
+
+# Duplicates are automatically removed
+numbers = {1, 2, 2, 3, 3, 3, 4}
+print(numbers)  # {1, 2, 3, 4}
+
+# Create empty set
+empty_set = set()
 ```
+
+### Set Operations
+```python
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Union (all elements from both sets)
+union = set1 | set2
+print(union)  # {1, 2, 3, 4, 5, 6}
+
+# Intersection (common elements)
+intersection = set1 & set2
+print(intersection)  # {3, 4}
+
+# Difference (elements in set1 but not in set2)
+difference = set1 - set2
+print(difference)  # {1, 2}
+
+# Symmetric difference (elements in either set, but not both)
+sym_diff = set1 ^ set2
+print(sym_diff)  # {1, 2, 5, 6}
+
+# Add element
+set1.add(5)
+
+# Remove element
+set1.remove(1)  # Raises error if not found
+set1.discard(1)  # No error if not found
+```
+
+### Set Practice
+```python
+# Check membership
+fruits = {"apple", "banana", "cherry"}
+
+if "apple" in fruits:
+    print("Apple is in the set")
+
+# Get length
+print(len(fruits))  # 3
+
+# Clear all elements
+fruits_copy = fruits.copy()
+fruits_copy.clear()
+print(fruits_copy)  # set()
+
+# Remove duplicates from list
+numbers = [1, 2, 2, 3, 3, 3, 4, 4]
+unique_numbers = list(set(numbers))
+print(unique_numbers)  # [1, 2, 3, 4]
+```
+
+### Intro to Dictionaries
+```python
+# Key-value pairs
+student = {
+    "name": "Alice",
+    "age": 20,
+    "grade": "A"
+}
+
+# Access values
+print(student["name"])  # Alice
+print(student.get("age"))  # 20
+
+# Add/modify entries
+student["email"] = "alice@example.com"
+student["age"] = 21
+
+print(student)
+```
+
+### Dict Operations
+```python
+person = {
+    "name": "Bob",
+    "age": 25,
+    "city": "New York"
+}
+
+# Get value with default
+email = person.get("email", "No email")
+print(email)  # No email
+
+# Check if key exists
+if "name" in person:
+    print("Name exists")
+
+# Get all keys
+keys = person.keys()
+print(keys)  # dict_keys(['name', 'age', 'city'])
+
+# Get all values
+values = person.values()
+print(values)  # dict_values(['Bob', 25, 'New York'])
+
+# Get all items (key-value pairs)
+items = person.items()
+print(items)  # dict_items([('name', 'Bob'), ('age', 25), ('city', 'New York')])
+```
+
+### Dict Looping
+```python
+student = {
+    "name": "Charlie",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+# Loop through keys
+for key in student:
+    print(key)
+
+# Loop through values
+for value in student.values():
+    print(value)
+
+# Loop through key-value pairs
+for key, value in student.items():
+    print(f"{key}: {value}")
+```
+
+### Dict Practice
+```python
+# Create a dictionary of word counts
+text = "hello world hello python world"
+words = text.split()
+
+word_count = {}
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+print(word_count)  # {'hello': 2, 'world': 2, 'python': 1}
+
+# Using get() method (cleaner approach)
+word_count = {}
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+print(word_count)
+```
+
+### Dict Remove
+```python
+person = {
+    "name": "David",
+    "age": 30,
+    "city": "Boston",
+    "email": "david@example.com"
+}
+
+# Remove specific key
+del person["email"]
+
+# Remove and return value
+age = person.pop("age")
+print(age)  # 30
+
+# Remove last inserted item (Python 3.7+)
+last_item = person.popitem()
+print(last_item)  # ('city', 'Boston')
+
+print(person)  # {'name': 'David'}
+```
+
+### Dict Values
+```python
+inventory = {
+    "apples": 50,
+    "bananas": 30,
+    "oranges": 40
+}
+
+# Get all values
+quantities = inventory.values()
+print(list(quantities))  # [50, 30, 40]
+
+# Sum all values
+total = sum(inventory.values())
+print(total)  # 120
+
+# Max value
+max_quantity = max(inventory.values())
+print(max_quantity)  # 50
+
+# Find key with max value
+max_item = max(inventory, key=inventory.get)
+print(max_item)  # apples
+```
+
+---
+
+## Input/Output
+
+### Reading Input
+```python
+# Get user input (always returns string)
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+
+# Input without prompt
+data = input()
+print(data)
+```
+
+### Type Conversion with Input
+```python
+# Convert input to integer
+age = int(input("Enter your age: "))
+print(f"Next year you'll be {age + 1}")
+
+# Convert input to float
+price = float(input("Enter price: "))
+print(f"With tax: ${price * 1.1:.2f}")
+
+# Convert input to boolean (careful - any non-empty string is True)
+response = input("Continue? (yes/no): ")
+continue_flag = response.lower() == "yes"
+```
+
+### Parse Input
+```python
+# Split input by spaces
+numbers = input("Enter numbers separated by spaces: ")
+num_list = numbers.split()
+print(num_list)
+
+# Convert to integers
+num_list = [int(x) for x in numbers.split()]
+print(sum(num_list))
+
+# Parse comma-separated values
+data = input("Enter values separated by commas: ")
+values = data.split(",")
+values = [x.strip() for x in values]  # Remove whitespace
+print(values)
+```
+
+### Reading Input Practice
+```python
+# Calculate rectangle area
+width = float(input("Enter width: "))
+height = float(input("Enter height: "))
+area = width * height
+print(f"Area: {area}")
+
+# Multiple inputs on one line
+print("Enter two numbers separated by space:")
+a, b = input().split()
+a, b = int(a), int(b)
+print(f"Sum: {a + b}")
+
+# Read multiple lines
+lines = []
+print("Enter text (type 'done' to finish):")
+while True:
+    line = input()
+    if line.lower() == "done":
+        break
+    lines.append(line)
+print("You entered:", lines)
+```
+
+---
+
+## Error Handling
+
+### Try Except
+```python
+# Basic error handling
+try:
+    number = int(input("Enter a number: "))
+    print(f"You entered: {number}")
+except:
+    print("That's not a valid number!")
+```
+
+### Error Catching
+```python
+# Catch specific error types
+try:
+    numerator = int(input("Enter numerator: "))
+    denominator = int(input("Enter denominator: "))
+    result = numerator / denominator
+    print(f"Result: {result}")
+except ValueError:
+    print("Please enter valid integers!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+```
+
+### Multiple Except Blocks
+```python
+# Handle different errors differently
+try:
+    age = int(input("Enter your age: "))
+    
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    
+    years_to_100 = 100 / age
+    print(f"You'll reach 100 in {years_to_100:.1f} years")
+    
+except ValueError as e:
+    print(f"Invalid input: {e}")
+except ZeroDivisionError:
+    print("Age cannot be zero!")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+else:
+    print("Calculation completed successfully!")
+finally:
+    print("Thank you for using the program!")
+```
+
+### Complete Error Handling Example
+```python
+def safe_divide(a, b):
+    """Safely divide two numbers with error handling"""
+    try:
+        result = float(a) / float(b)
+        return result
+    except ValueError:
+        print("Error: Both inputs must be numbers")
+        return None
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero")
+        return None
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        return None
+
+# Test the function
+print(safe_divide(10, 2))      # 5.0
+print(safe_divide(10, 0))      # Error message, returns None
+print(safe_divide("10", "a"))  # Error message, returns None
+```
+
+---
