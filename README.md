@@ -18,10 +18,6 @@ A comprehensive guide covering all core Python concepts from basics to advanced 
 - [Data Structures](#-data-structures)
   - [Strings](#strings)
   - [Lists](#lists)
-  - [Tuples](#tuples)
-  - [Sets](#sets)
-- [Best Practices](#-best-practices)
-- [Resources](#-resources)
 
 ---
 
