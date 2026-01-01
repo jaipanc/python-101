@@ -7,21 +7,21 @@ A comprehensive guide covering all core Python concepts from basics to advanced 
 
 ## 📋 Table of Contents
 
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Basic Concepts](#basic-concepts)
-- [Data Types](#data-types)
-- [Operators](#operators)
-- [Control Flow](#control-flow)
-- [Loops](#loops)
-- [Functions](#functions)
-- [Data Structures](#data-structures)
+- [Introduction](#-introduction)
+- [Getting Started](#-getting-started)
+- [Basic Concepts](#-basic-concepts)
+- [Data Types](#-data-types)
+- [Operators](#-operators)
+- [Control Flow](#-control-flow)
+- [Loops](#-loops)
+- [Functions](#-functions)
+- [Data Structures](#-data-structures)
   - [Strings](#strings)
   - [Lists](#lists)
   - [Tuples](#tuples)
   - [Sets](#sets)
-- [Best Practices](#best-practices)
-- [Resources](#resources)
+- [Best Practices](#-best-practices)
+- [Resources](#-resources)
 
 ---
 
