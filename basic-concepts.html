@@ -1,5 +1,5 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
-<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2026-01-01T21:47:40.0518594"><title>📚 Basic Concepts | Python 101</title><script type="application/json" id="virtual-toc-data">[{"id":"variables","level":0,"title":"Variables","anchor":"#variables"},{"id":"naming-conventions","level":0,"title":"Naming Conventions","anchor":"#naming-conventions"},{"id":"variable-rules","level":0,"title":"Variable Rules","anchor":"#variable-rules"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="📚 Basic Concepts | Python 101"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python 101 Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/basic-concepts.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="📚 Basic Concepts | Python 101"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2026-01-03T22:34:44.4784326"><title>📚 Basic Concepts | Python 101</title><script type="application/json" id="virtual-toc-data">[{"id":"variables","level":0,"title":"Variables","anchor":"#variables"},{"id":"naming-conventions","level":0,"title":"Naming Conventions","anchor":"#naming-conventions"},{"id":"variable-rules","level":0,"title":"Variable Rules","anchor":"#variable-rules"},{"id":"variable-declaration","level":0,"title":"Variable Declaration","anchor":"#variable-declaration"},{"id":"variable-naming","level":0,"title":"Variable Naming","anchor":"#variable-naming"},{"id":"conventions","level":0,"title":"Conventions","anchor":"#conventions"},{"id":"reassigning-variables","level":0,"title":"Reassigning Variables","anchor":"#reassigning-variables"},{"id":"multiple-assignments","level":0,"title":"Multiple Assignments","anchor":"#multiple-assignments"},{"id":"variable-types","level":0,"title":"Variable Types","anchor":"#variable-types"},{"id":"dynamic-typing","level":0,"title":"Dynamic Typing","anchor":"#dynamic-typing"},{"id":"type-casting","level":0,"title":"Type Casting","anchor":"#type-casting"},{"id":"empty-variable","level":0,"title":"Empty Variable","anchor":"#empty-variable"},{"id":"errors","level":0,"title":"Errors","anchor":"#errors"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="16x16" href="https://www.python.org/static/apple-touch-icon-144x144-precomposed.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="📚 Basic Concepts | Python 101"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python 101 Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/basic-concepts.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="📚 Basic Concepts | Python 101"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
     "@context": "http://schema.org",
     "@type": "WebPage",
     "@id": "writerside-documentation/basic-concepts.html#webpage",
@@ -13,7 +13,7 @@
     "@id": "writerside-documentation/#website",
     "url": "writerside-documentation/",
     "name": "Python 101 Help"
-}</script><!-- End Schema.org --></head><body data-id="Basic-Concepts" data-main-title="📚 Basic Concepts" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python 101  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Basic-Concepts" id="Basic-Concepts.md">📚 Basic Concepts</h1><section class="chapter"><h2 id="variables" data-toc="variables">Variables</h2><p id="-en1cm_6">Variables store data for reuse throughout your program.</p><div class="code-block" data-lang="python">
+}</script><!-- End Schema.org --></head><body data-id="Basic-Concepts" data-main-title="📚 Basic Concepts" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python 101  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Basic-Concepts" id="Basic-Concepts.md">📚 Basic Concepts</h1><section class="chapter"><h2 id="variables" data-toc="variables">Variables</h2><p id="xev785_16">Variables store data for reuse throughout your program.</p><div class="code-block" data-lang="none">
 # Variable assignment
 message = &quot;Hello, Python!&quot;
 count = 42
@@ -24,4 +24,97 @@ x, y, z = 1, 2, 3
 
 # Swapping variables
 a, b = b, a
-</div></section><section class="chapter"><h2 id="naming-conventions" data-toc="naming-conventions">Naming Conventions</h2><div class="table-wrapper"><table class="wide" id="-en1cm_8"><thead><tr class="ijRowHead" id="-en1cm_9"><th id="-en1cm_13"><p>Convention</p></th><th id="-en1cm_14"><p>Example</p></th><th id="-en1cm_15"><p>Usage</p></th></tr></thead><tbody><tr id="-en1cm_10"><td id="-en1cm_16"><p><span class="control" id="-en1cm_19">snake_case</span></p></td><td id="-en1cm_17"><p><code class="code" id="-en1cm_20">my_variable</code></p></td><td id="-en1cm_18"><p>✅ Preferred in Python</p></td></tr><tr id="-en1cm_11"><td id="-en1cm_21"><p><span class="control" id="-en1cm_24">camelCase</span></p></td><td id="-en1cm_22"><p><code class="code" id="-en1cm_25">myVariable</code></p></td><td id="-en1cm_23"><p>Used in JavaScript</p></td></tr><tr id="-en1cm_12"><td id="-en1cm_26"><p><span class="control" id="-en1cm_29">PascalCase</span></p></td><td id="-en1cm_27"><p><code class="code" id="-en1cm_30">MyVariable</code></p></td><td id="-en1cm_28"><p>Used for class names</p></td></tr></tbody></table></div></section><section class="chapter"><h2 id="variable-rules" data-toc="variable-rules">Variable Rules</h2><ul class="list _bullet" id="-en1cm_31"><li class="list__item" id="-en1cm_33"><p id="-en1cm_37">✅ Can contain letters, numbers, underscores</p></li><li class="list__item" id="-en1cm_34"><p id="-en1cm_38">❌ Cannot start with a number</p></li><li class="list__item" id="-en1cm_35"><p id="-en1cm_39">❌ Cannot use Python keywords (<code class="code" id="-en1cm_40">if</code>, <code class="code" id="-en1cm_41">for</code>, <code class="code" id="-en1cm_42">while</code>, etc.)</p></li><li class="list__item" id="-en1cm_36"><p id="-en1cm_43">❌ Cannot contain spaces</p></li></ul></section><div class="last-modified">02 January 2026</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="gettingstarted.html" class="navigation-links__prev">🚀  Getting Started</a><a href="datatypes.html" class="navigation-links__next">🔢 Data Types</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.js"></script></body></html>
+</div></section><section class="chapter"><h2 id="naming-conventions" data-toc="naming-conventions">Naming Conventions</h2><div class="table-wrapper"><table class="wide" id="xev785_18"><thead><tr class="ijRowHead" id="xev785_19"><th id="xev785_23"><p>Convention</p></th><th id="xev785_24"><p>Example</p></th><th id="xev785_25"><p>Usage</p></th></tr></thead><tbody><tr id="xev785_20"><td id="xev785_26"><p><span class="control" id="xev785_29">snake_case</span></p></td><td id="xev785_27"><p><code class="code" id="xev785_30">my_variable</code></p></td><td id="xev785_28"><p>✅ Preferred in Python</p></td></tr><tr id="xev785_21"><td id="xev785_31"><p><span class="control" id="xev785_34">camelCase</span></p></td><td id="xev785_32"><p><code class="code" id="xev785_35">myVariable</code></p></td><td id="xev785_33"><p>Used in JavaScript</p></td></tr><tr id="xev785_22"><td id="xev785_36"><p><span class="control" id="xev785_39">PascalCase</span></p></td><td id="xev785_37"><p><code class="code" id="xev785_40">MyVariable</code></p></td><td id="xev785_38"><p>Used for class names</p></td></tr></tbody></table></div></section><section class="chapter"><h2 id="variable-rules" data-toc="variable-rules">Variable Rules</h2><ul class="list _bullet" id="xev785_41"><li class="list__item" id="xev785_42"><p id="xev785_46">✅ Can contain letters, numbers, underscores</p></li><li class="list__item" id="xev785_43"><p id="xev785_47">❌ Cannot start with a number</p></li><li class="list__item" id="xev785_44"><p id="xev785_48">❌ Cannot use Python keywords (<code class="code" id="xev785_49">if</code>, <code class="code" id="xev785_50">for</code>, <code class="code" id="xev785_51">while</code>, etc.)</p></li><li class="list__item" id="xev785_45"><p id="xev785_52">❌ Cannot contain spaces</p></li></ul></section><section class="chapter"><h2 id="variable-declaration" data-toc="variable-declaration">Variable Declaration</h2><p id="xev785_53"><span class="control" id="xev785_56">Creating and assigning variables for the first time</span></p><div class="code-block" data-lang="python">
+message = &quot;Hello&quot;  # Declaring a variable
+age = 25           # Declaring another variable
+</div></section><section class="chapter"><h2 id="variable-naming" data-toc="variable-naming">Variable Naming</h2><p id="xev785_57"><span class="control" id="xev785_60">Rules for what you can name your variables</span></p><div class="code-block" data-lang="python">
+# Valid names
+my_variable = 10
+_private = 5
+name123 = &quot;Alice&quot;
+
+# Invalid names
+123name = &quot;Bob&quot;        # Can't start with number
+my-variable = 10       # Can't use hyphens
+my variable = 10       # Can't use spaces
+</div></section><section class="chapter"><h2 id="conventions" data-toc="conventions">Conventions</h2><p id="xev785_61"><span class="control" id="xev785_65">Style guidelines for making variable names consistent and readable</span></p><div class="code-block" data-lang="python">
+# snake_case (Python standard)
+user_name = &quot;Alice&quot;
+total_count = 42
+
+# camelCase (used in other languages)
+userName = &quot;Alice&quot;
+
+# PascalCase (used for classes)
+UserProfile = {}
+</div><p id="xev785_63"><span class="control" id="xev785_66">Python prefers snake_case</span> (words separated by underscores, all lowercase)</p></section><section class="chapter"><h2 id="reassigning-variables" data-toc="reassigning-variables">Reassigning Variables</h2><p id="xev785_67"><span class="control" id="xev785_70">Changing a variable's value after it's been created</span></p><div class="code-block" data-lang="python">
+count = 5
+print(count)   # Output: 5
+
+count = 10     # Reassign to new value
+print(count)   # Output: 10
+</div></section><section class="chapter"><h2 id="multiple-assignments" data-toc="multiple-assignments">Multiple Assignments</h2><p id="xev785_71"><span class="control" id="xev785_74">Assigning multiple variables in a single line</span></p><div class="code-block" data-lang="python">
+# Assign multiple variables at once
+x, y, z = 1, 2, 3
+
+# Swap values
+a, b = 5, 10
+a, b = b, a  # Now a=10, b=5
+</div></section><section class="chapter"><h2 id="variable-types" data-toc="variable-types">Variable Types</h2><p id="xev785_75"><span class="control" id="xev785_78">Understanding different data types variables can hold</span></p><div class="code-block" data-lang="python">
+age = 25              # Integer (int)
+height = 5.9          # Float (decimal number)
+name = &quot;Alice&quot;        # String (text)
+is_student = True     # Boolean (true/false)
+numbers = [1, 2, 3]   # List (collection)
+</div></section><section class="chapter"><h2 id="dynamic-typing" data-toc="dynamic-typing">Dynamic Typing</h2><p id="xev785_79"><span class="control" id="xev785_83">Python allows variables to change types</span></p><div class="code-block" data-lang="python">
+# Same variable, different types
+value = 10           # Integer
+value = &quot;Hello&quot;      # Now it's a string
+value = 3.14         # Now it's a float
+</div><p id="xev785_81"><span class="control" id="xev785_84">Note</span>: This is unique to Python. Languages like Java don't allow this.</p></section><section class="chapter"><h2 id="type-casting" data-toc="type-casting">Type Casting</h2><p id="xev785_85"><span class="control" id="xev785_87">Converting one data type to another</span></p><div class="code-block" data-lang="python">
+# Convert string to integer
+num_string = &quot;25&quot;
+num = int(num_string)  # Now it's 25 (integer)
+
+# Convert float to integer
+decimal = 3.9
+whole = int(decimal)   # Now it's 3 (truncated)
+
+# Convert to string
+age = 30
+age_text = str(age)    # Now it's &quot;30&quot; (string)
+</div></section><section class="chapter"><h2 id="empty-variable" data-toc="empty-variable">Empty Variable</h2><p id="xev785_88"><span class="control" id="xev785_90">Using <code class="code" id="xev785_91">None</code> to represent the absence of a value</span></p><div class="code-block" data-lang="python">
+# Declare a variable with no value
+empty_var = None
+
+# Check if variable is None
+if empty_var is None:
+    print(&quot;Variable is empty&quot;)
+
+# None is different from 0 or empty string
+zero = 0
+empty_string = &quot;&quot;
+# These are NOT the same as None
+</div></section><section class="chapter"><h2 id="errors" data-toc="errors">Errors</h2><p id="xev785_92"><span class="control" id="xev785_97">Code errors</span> are mistakes in your program that prevent it from running correctly or at all. There are several types:</p><section class="chapter"><h3 id="1-syntax-errors" data-toc="1-syntax-errors">1. <span class="control" id="xev785_102">Syntax Errors</span></h3><p id="xev785_99">Mistakes in how you write code (grammar of programming)</p><div class="code-block" data-lang="python">
+# Syntax Error - missing closing parenthesis
+print(&quot;Hello&quot;
+
+# Syntax Error - missing colon after if statement
+if x &gt; 5
+    print(&quot;x is big&quot;)
+</div><p id="xev785_101"><span class="control" id="xev785_103">Result</span>: Program won't run at all</p></section><section class="chapter"><h3 id="2-runtime-errors" data-toc="2-runtime-errors">2. <span class="control" id="xev785_108">Runtime Errors</span></h3><p id="xev785_105">Errors that occur while the program is running</p><div class="code-block" data-lang="python">
+# Runtime Error - dividing by zero
+result = 10 / 0
+
+# Runtime Error - using undefined variable
+print(undefined_variable)
+</div><p id="xev785_107"><span class="control" id="xev785_109">Result</span>: Program crashes during execution</p></section><section class="chapter"><h3 id="3-logical-errors" data-toc="3-logical-errors">3. <span class="control" id="xev785_114">Logical Errors</span></h3><p id="xev785_111">Code runs without crashing, but produces wrong results</p><div class="code-block" data-lang="python">
+# Logical Error - wrong calculation
+total = 5 + 3 * 2  # Might give unexpected result if order of operations is misunderstood
+</div><p id="xev785_113"><span class="control" id="xev785_115">Result</span>: Program runs but gives incorrect output</p></section><section class="chapter"><h3 id="4-type-errors" data-toc="4-type-errors">4. <span class="control" id="xev785_120">Type Errors</span></h3><p id="xev785_117"><span class="control" id="xev785_121">Errors that occur when you try invalid type conversions</span></p><div class="code-block" data-lang="python">
+# Type Error - can't convert non-numeric string to integer
+result = int(&quot;hello&quot;)  # ERROR!
+
+# This works because the string contains a number
+result = int(&quot;25&quot;)     # Works fine, result = 25
+</div></section></section><div class="last-modified">02 January 2026</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="gettingstarted.html" class="navigation-links__prev">🚀  Getting Started</a><a href="datatypes.html" class="navigation-links__next">🔢 Data Types</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.js"></script></body></html>
