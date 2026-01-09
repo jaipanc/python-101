@@ -1,5 +1,5 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
-<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2026-01-03T22:34:44.477433"><title>📦 Data Structures | Python 101</title><script type="application/json" id="virtual-toc-data">[{"id":"strings","level":0,"title":"Strings","anchor":"#strings"},{"id":"lists","level":0,"title":"Lists","anchor":"#lists"},{"id":"set-operations","level":0,"title":"Set Operations","anchor":"#set-operations"},{"id":"set-practice","level":0,"title":"Set Practice","anchor":"#set-practice"},{"id":"intro-to-dictionaries","level":0,"title":"Intro to Dictionaries","anchor":"#intro-to-dictionaries"},{"id":"dict-operations","level":0,"title":"Dict Operations","anchor":"#dict-operations"},{"id":"dict-looping","level":0,"title":"Dict Looping","anchor":"#dict-looping"},{"id":"dict-practice","level":0,"title":"Dict Practice","anchor":"#dict-practice"},{"id":"dict-remove","level":0,"title":"Dict Remove","anchor":"#dict-remove"},{"id":"dict-values","level":0,"title":"Dict Values","anchor":"#dict-values"},{"id":"input-output","level":0,"title":"Input/Output","anchor":"#input-output"},{"id":"error-handling","level":0,"title":"Error Handling","anchor":"#error-handling"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="16x16" href="https://www.python.org/static/apple-touch-icon-144x144-precomposed.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="📦 Data Structures | Python 101"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python 101 Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/data-structures.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="📦 Data Structures | Python 101"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2026-01-08T23:32:33.3596712"><title>📦 Data Structures | Python 101</title><script type="application/json" id="virtual-toc-data">[{"id":"type-conversion-with-input","level":0,"title":"Type Conversion with Input","anchor":"#type-conversion-with-input"},{"id":"parse-input","level":0,"title":"Parse Input","anchor":"#parse-input"},{"id":"reading-input-practice","level":0,"title":"Reading Input Practice","anchor":"#reading-input-practice"},{"id":"error-handling","level":0,"title":"Error Handling","anchor":"#error-handling"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="16x16" href="https://www.python.org/static/apple-touch-icon-144x144-precomposed.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="📦 Data Structures | Python 101"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python 101 Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/data-structures.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="📦 Data Structures | Python 101"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
     "@context": "http://schema.org",
     "@type": "WebPage",
     "@id": "writerside-documentation/data-structures.html#webpage",
@@ -13,353 +13,7 @@
     "@id": "writerside-documentation/#website",
     "url": "writerside-documentation/",
     "name": "Python 101 Help"
-}</script><!-- End Schema.org --></head><body data-id="📦-Data-Structures" data-main-title="📦 Data Structures" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python 101  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="📦-Data-Structures" id="📦-Data-Structures.md">📦 Data Structures</h1><section class="chapter"><h2 id="strings" data-toc="strings">Strings</h2><section class="chapter"><h3 id="string-basics" data-toc="string-basics">String Basics</h3><div class="code-block" data-lang="python">
-# Creating strings
-text = &quot;Hello, World!&quot;
-text2 = 'Python Programming'
-
-# String length
-length = len(text)  # 13
-
-# String indexing (zero-based)
-first_char = text[0]   # 'H'
-last_char = text[-1]   # '!'
-
-# String slicing
-substring = text[0:5]   # &quot;Hello&quot;
-substring = text[:5]    # &quot;Hello&quot;
-substring = text[7:]    # &quot;World!&quot;
-substring = text[::2]   # &quot;Hlo ol!&quot;
-reversed_text = text[::-1]  # &quot;!dlroW ,olleH&quot;
-</div></section><section class="chapter"><h3 id="string-methods" data-toc="string-methods">String Methods</h3><div class="code-block" data-lang="python">
-text = &quot;Hello, World!&quot;
-
-# Case conversion
-text.upper()      # &quot;HELLO, WORLD!&quot;
-text.lower()      # &quot;hello, world!&quot;
-text.capitalize() # &quot;Hello, world!&quot;
-
-# String checks
-text.startswith(&quot;Hello&quot;)  # True
-text.endswith(&quot;!&quot;)        # True
-&quot;123&quot;.isdigit()           # True
-&quot;abc&quot;.isalpha()           # True
-
-# Find and replace
-text.find(&quot;World&quot;)        # 7
-text.replace(&quot;World&quot;, &quot;Python&quot;)  # &quot;Hello, Python!&quot;
-
-# Split and join
-words = text.split(&quot;, &quot;)  # [&quot;Hello&quot;, &quot;World!&quot;]
-&quot; &quot;.join(words)           # &quot;Hello World!&quot;
-
-# Strip whitespace
-&quot;  hello  &quot;.strip()       # &quot;hello&quot;
-</div></section><section class="chapter"><h3 id="string-formatting" data-toc="string-formatting">String Formatting</h3><div class="code-block" data-lang="python">
-name = &quot;Alice&quot;
-age = 25
-
-# f-strings (Python 3.6+) - Recommended
-message = f&quot;My name is {name} and I'm {age} years old&quot;
-
-# .format() method
-message = &quot;My name is {} and I'm {} years old&quot;.format(name, age)
-
-# % operator (old style)
-message = &quot;My name is %s and I'm %d years old&quot; % (name, age)
-</div></section><section class="chapter"><h3 id="string-immutability" data-toc="string-immutability">String Immutability</h3><div class="code-block" data-lang="python">
-text = &quot;Hello&quot;
-# text[0] = &quot;h&quot;  # Error: strings are immutable
-
-# Create new string instead
-text = &quot;h&quot; + text[1:]  # &quot;hello&quot;
-</div></section><section class="chapter"><h3 id="looping-through-strings" data-toc="looping-through-strings">Looping Through Strings</h3><div class="code-block" data-lang="python">
-text = &quot;Python&quot;
-
-# Loop through characters
-for char in text:
-    print(char)
-
-# Loop with index
-for i in range(len(text)):
-    print(f&quot;{i}: {text[i]}&quot;)
-</div></section></section><section class="chapter"><h2 id="lists" data-toc="lists">Lists</h2><section class="chapter"><h3 id="list-basics" data-toc="list-basics">List Basics</h3><div class="code-block" data-lang="python">
-# Creating lists
-numbers = [1, 2, 3, 4, 5]
-mixed = [1, &quot;two&quot;, 3.0, True]
-empty = []
-
-# List length
-length = len(numbers)  # 5
-
-# Accessing elements
-first = numbers[0]   # 1
-last = numbers[-1]   # 5
-
-# Modifying elements (lists are mutable)
-numbers[0] = 10  # [10, 2, 3, 4, 5]
-</div></section><section class="chapter"><h3 id="list-methods" data-toc="list-methods">List Methods</h3><div class="code-block" data-lang="python">
-numbers = [1, 2, 3]
-
-# Add elements
-numbers.append(4)      # [1, 2, 3, 4]
-numbers.extend([5, 6]) # [1, 2, 3, 4, 5, 6]
-numbers.insert(0, 0)   # [0, 1, 2, 3, 4, 5, 6]
-
-# Remove elements
-numbers.pop()          # Removes and returns last element
-numbers.pop(0)         # Removes element at index 0
-numbers.remove(3)      # Removes first occurrence of 3
-numbers.clear()        # Removes all elements
-
-# Find elements
-index = numbers.index(3)  # Returns index of first 3
-count = numbers.count(2)  # Counts occurrences of 2
-
-# Check membership
-if 3 in numbers:
-    print(&quot;3 is in the list&quot;)
-
-# Sort and reverse
-numbers.sort()          # Sort in place (ascending)
-numbers.sort(reverse=True)  # Sort descending
-numbers.reverse()       # Reverse in place
-sorted_nums = sorted(numbers)  # Returns new sorted list
-</div></section><section class="chapter"><h3 id="list-slicing" data-toc="list-slicing">List Slicing</h3><div class="code-block" data-lang="python">
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-# Basic slicing
-numbers[2:5]    # [2, 3, 4]
-numbers[:5]     # [0, 1, 2, 3, 4]
-numbers[5:]     # [5, 6, 7, 8, 9]
-numbers[::2]    # [0, 2, 4, 6, 8]
-numbers[::-1]   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-
-# Last n elements
-numbers[-3:]    # [7, 8, 9]
-</div></section><section class="chapter"><h3 id="list-comprehensions" data-toc="list-comprehensions">List Comprehensions</h3><div class="code-block" data-lang="python">
-# Create list with loop
-squares = [x**2 for x in range(10)]
-# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
-# With condition
-evens = [x for x in range(10) if x % 2 == 0]
-# [0, 2, 4, 6, 8]
-
-# Nested comprehension
-matrix = [[i*j for j in range(3)] for i in range(3)]
-# [[0, 0, 0], [0, 1, 2], [0, 2, 4]]
-</div></section><section class="chapter"><h3 id="built-in-list-functions" data-toc="built-in-list-functions">Built-in List Functions</h3><div class="code-block" data-lang="python">
-numbers = [3, 1, 4, 1, 5, 9, 2, 6]
-
-sum(numbers)    # 31
-min(numbers)    # 1
-max(numbers)    # 9
-len(numbers)    # 8
-</div></section><section class="chapter"><h3 id="looping-through-lists" data-toc="looping-through-lists">Looping Through Lists</h3><div class="code-block" data-lang="python">
-fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
-
-# Loop with elements
-for fruit in fruits:
-    print(fruit)
-
-# Loop with index
-for i in range(len(fruits)):
-    print(f&quot;{i}: {fruits[i]}&quot;)
-
-# Python Programming Learning Guide - Data Structures (Continued)
-
-## Data Structures
-
-### Intro to Sets
-```python
-# Unordered collection of unique items
-fruits = {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;}
-print(fruits)
-
-# Duplicates are automatically removed
-numbers = {1, 2, 2, 3, 3, 3, 4}
-print(numbers)  # {1, 2, 3, 4}
-
-# Create empty set
-empty_set = set()
-</div></section></section><section class="chapter"><h2 id="set-operations" data-toc="set-operations">Set Operations</h2><div class="code-block" data-lang="python">
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
-
-# Union (all elements from both sets)
-union = set1 | set2
-print(union)  # {1, 2, 3, 4, 5, 6}
-
-# Intersection (common elements)
-intersection = set1 &amp; set2
-print(intersection)  # {3, 4}
-
-# Difference (elements in set1 but not in set2)
-difference = set1 - set2
-print(difference)  # {1, 2}
-
-# Symmetric difference (elements in either set, but not both)
-sym_diff = set1 ^ set2
-print(sym_diff)  # {1, 2, 5, 6}
-
-# Add element
-set1.add(5)
-
-# Remove element
-set1.remove(1)  # Raises error if not found
-set1.discard(1)  # No error if not found
-</div></section><section class="chapter"><h2 id="set-practice" data-toc="set-practice">Set Practice</h2><div class="code-block" data-lang="python">
-# Check membership
-fruits = {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;}
-
-if &quot;apple&quot; in fruits:
-    print(&quot;Apple is in the set&quot;)
-
-# Get length
-print(len(fruits))  # 3
-
-# Clear all elements
-fruits_copy = fruits.copy()
-fruits_copy.clear()
-print(fruits_copy)  # set()
-
-# Remove duplicates from list
-numbers = [1, 2, 2, 3, 3, 3, 4, 4]
-unique_numbers = list(set(numbers))
-print(unique_numbers)  # [1, 2, 3, 4]
-</div></section><section class="chapter"><h2 id="intro-to-dictionaries" data-toc="intro-to-dictionaries">Intro to Dictionaries</h2><div class="code-block" data-lang="python">
-# Key-value pairs
-student = {
-    &quot;name&quot;: &quot;Alice&quot;,
-    &quot;age&quot;: 20,
-    &quot;grade&quot;: &quot;A&quot;
-}
-
-# Access values
-print(student[&quot;name&quot;])  # Alice
-print(student.get(&quot;age&quot;))  # 20
-
-# Add/modify entries
-student[&quot;email&quot;] = &quot;alice@example.com&quot;
-student[&quot;age&quot;] = 21
-
-print(student)
-</div></section><section class="chapter"><h2 id="dict-operations" data-toc="dict-operations">Dict Operations</h2><div class="code-block" data-lang="python">
-person = {
-    &quot;name&quot;: &quot;Bob&quot;,
-    &quot;age&quot;: 25,
-    &quot;city&quot;: &quot;New York&quot;
-}
-
-# Get value with default
-email = person.get(&quot;email&quot;, &quot;No email&quot;)
-print(email)  # No email
-
-# Check if key exists
-if &quot;name&quot; in person:
-    print(&quot;Name exists&quot;)
-
-# Get all keys
-keys = person.keys()
-print(keys)  # dict_keys(['name', 'age', 'city'])
-
-# Get all values
-values = person.values()
-print(values)  # dict_values(['Bob', 25, 'New York'])
-
-# Get all items (key-value pairs)
-items = person.items()
-print(items)  # dict_items([('name', 'Bob'), ('age', 25), ('city', 'New York')])
-</div></section><section class="chapter"><h2 id="dict-looping" data-toc="dict-looping">Dict Looping</h2><div class="code-block" data-lang="python">
-student = {
-    &quot;name&quot;: &quot;Charlie&quot;,
-    &quot;age&quot;: 22,
-    &quot;major&quot;: &quot;Computer Science&quot;
-}
-
-# Loop through keys
-for key in student:
-    print(key)
-
-# Loop through values
-for value in student.values():
-    print(value)
-
-# Loop through key-value pairs
-for key, value in student.items():
-    print(f&quot;{key}: {value}&quot;)
-</div></section><section class="chapter"><h2 id="dict-practice" data-toc="dict-practice">Dict Practice</h2><div class="code-block" data-lang="python">
-# Create a dictionary of word counts
-text = &quot;hello world hello python world&quot;
-words = text.split()
-
-word_count = {}
-for word in words:
-    if word in word_count:
-        word_count[word] += 1
-    else:
-        word_count[word] = 1
-
-print(word_count)  # {'hello': 2, 'world': 2, 'python': 1}
-
-# Using get() method (cleaner approach)
-word_count = {}
-for word in words:
-    word_count[word] = word_count.get(word, 0) + 1
-
-print(word_count)
-</div></section><section class="chapter"><h2 id="dict-remove" data-toc="dict-remove">Dict Remove</h2><div class="code-block" data-lang="python">
-person = {
-    &quot;name&quot;: &quot;David&quot;,
-    &quot;age&quot;: 30,
-    &quot;city&quot;: &quot;Boston&quot;,
-    &quot;email&quot;: &quot;david@example.com&quot;
-}
-
-# Remove specific key
-del person[&quot;email&quot;]
-
-# Remove and return value
-age = person.pop(&quot;age&quot;)
-print(age)  # 30
-
-# Remove last inserted item (Python 3.7+)
-last_item = person.popitem()
-print(last_item)  # ('city', 'Boston')
-
-print(person)  # {'name': 'David'}
-</div></section><section class="chapter"><h2 id="dict-values" data-toc="dict-values">Dict Values</h2><div class="code-block" data-lang="python">
-inventory = {
-    &quot;apples&quot;: 50,
-    &quot;bananas&quot;: 30,
-    &quot;oranges&quot;: 40
-}
-
-# Get all values
-quantities = inventory.values()
-print(list(quantities))  # [50, 30, 40]
-
-# Sum all values
-total = sum(inventory.values())
-print(total)  # 120
-
-# Max value
-max_quantity = max(inventory.values())
-print(max_quantity)  # 50
-
-# Find key with max value
-max_item = max(inventory, key=inventory.get)
-print(max_item)  # apples
-</div></section><section class="chapter"><h2 id="input-output" data-toc="input-output">Input/Output</h2><section class="chapter"><h3 id="reading-input" data-toc="reading-input">Reading Input</h3><div class="code-block" data-lang="python">
-# Get user input (always returns string)
-name = input(&quot;Enter your name: &quot;)
-print(f&quot;Hello, {name}!&quot;)
-
-# Input without prompt
-data = input()
-print(data)
-</div></section><section class="chapter"><h3 id="type-conversion-with-input" data-toc="type-conversion-with-input">Type Conversion with Input</h3><div class="code-block" data-lang="python">
+}</script><!-- End Schema.org --></head><body data-id="📦-Data-Structures" data-main-title="📦 Data Structures" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python 101  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="📦-Data-Structures" id="📦-Data-Structures.md">📦 Data Structures</h1><section class="chapter"><h2 id="type-conversion-with-input" data-toc="type-conversion-with-input">Type Conversion with Input</h2><div class="code-block" data-lang="python">
 # Convert input to integer
 age = int(input(&quot;Enter your age: &quot;))
 print(f&quot;Next year you'll be {age + 1}&quot;)
@@ -371,7 +25,7 @@ print(f&quot;With tax: ${price * 1.1:.2f}&quot;)
 # Convert input to boolean (careful - any non-empty string is True)
 response = input(&quot;Continue? (yes/no): &quot;)
 continue_flag = response.lower() == &quot;yes&quot;
-</div></section><section class="chapter"><h3 id="parse-input" data-toc="parse-input">Parse Input</h3><div class="code-block" data-lang="python">
+</div></section><section class="chapter"><h2 id="parse-input" data-toc="parse-input">Parse Input</h2><div class="code-block" data-lang="python">
 # Split input by spaces
 numbers = input(&quot;Enter numbers separated by spaces: &quot;)
 num_list = numbers.split()
@@ -386,7 +40,7 @@ data = input(&quot;Enter values separated by commas: &quot;)
 values = data.split(&quot;,&quot;)
 values = [x.strip() for x in values]  # Remove whitespace
 print(values)
-</div></section><section class="chapter"><h3 id="reading-input-practice" data-toc="reading-input-practice">Reading Input Practice</h3><div class="code-block" data-lang="python">
+</div></section><section class="chapter"><h2 id="reading-input-practice" data-toc="reading-input-practice">Reading Input Practice</h2><div class="code-block" data-lang="python">
 # Calculate rectangle area
 width = float(input(&quot;Enter width: &quot;))
 height = float(input(&quot;Enter height: &quot;))
@@ -408,7 +62,7 @@ while True:
         break
     lines.append(line)
 print(&quot;You entered:&quot;, lines)
-</div></section></section><section class="chapter"><h2 id="error-handling" data-toc="error-handling">Error Handling</h2><section class="chapter"><h3 id="try-except" data-toc="try-except">Try Except</h3><div class="code-block" data-lang="python">
+</div></section><section class="chapter"><h2 id="error-handling" data-toc="error-handling">Error Handling</h2><section class="chapter"><h3 id="try-except" data-toc="try-except">Try Except</h3><div class="code-block" data-lang="python">
 # Basic error handling
 try:
     number = int(input(&quot;Enter a number: &quot;))
@@ -467,4 +121,4 @@ def safe_divide(a, b):
 print(safe_divide(10, 2))      # 5.0
 print(safe_divide(10, 0))      # Error message, returns None
 print(safe_divide(&quot;10&quot;, &quot;a&quot;))  # Error message, returns None
-</div></section></section><div class="last-modified">02 January 2026</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="functions.html" class="navigation-links__prev">🔧 Functions</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.js"></script></body></html>
+</div></section></section><div class="last-modified">05 January 2026</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="functions.html" class="navigation-links__prev">🔧 Functions</a><a href="strings.html" class="navigation-links__next">Strings</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.js"></script></body></html>

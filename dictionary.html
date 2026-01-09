@@ -1,0 +1,115 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2026-01-08T23:32:33.3496703"><title>Dictionary | Python 101</title><script type="application/json" id="virtual-toc-data">[{"id":"intro-to-dictionaries","level":0,"title":"Intro to Dictionaries","anchor":"#intro-to-dictionaries"},{"id":"dict-operations","level":0,"title":"Dict Operations","anchor":"#dict-operations"},{"id":"dict-looping","level":0,"title":"Dict Looping","anchor":"#dict-looping"},{"id":"dict-practice","level":0,"title":"Dict Practice","anchor":"#dict-practice"},{"id":"dict-remove","level":0,"title":"Dict Remove","anchor":"#dict-remove"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="16x16" href="https://www.python.org/static/apple-touch-icon-144x144-precomposed.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Dictionary | Python 101"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python 101 Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/dictionary.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Dictionary | Python 101"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/dictionary.html#webpage",
+    "url": "writerside-documentation/dictionary.html",
+    "name": "Dictionary | Python 101",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Python 101 Help"
+}</script><!-- End Schema.org --></head><body data-id="Dictionary" data-main-title="Dictionary" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="📦-Data-Structures.md|📦 Data Structures"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python 101  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Dictionary" id="Dictionary.md">Dictionary</h1><section class="chapter"><h2 id="intro-to-dictionaries" data-toc="intro-to-dictionaries">Intro to Dictionaries</h2><div class="code-block" data-lang="python">
+# Key-value pairs
+student = {
+    &quot;name&quot;: &quot;Alice&quot;,
+    &quot;age&quot;: 20,
+    &quot;grade&quot;: &quot;A&quot;
+}
+
+# Access values
+print(student[&quot;name&quot;])  # Alice
+print(student.get(&quot;age&quot;))  # 20
+
+# Add/modify entries
+student[&quot;email&quot;] = &quot;alice@example.com&quot;
+student[&quot;age&quot;] = 21
+
+print(student)
+</div></section><section class="chapter"><h2 id="dict-operations" data-toc="dict-operations">Dict Operations</h2><div class="code-block" data-lang="python">
+person = {
+    &quot;name&quot;: &quot;Bob&quot;,
+    &quot;age&quot;: 25,
+    &quot;city&quot;: &quot;New York&quot;
+}
+
+# Get value with default
+email = person.get(&quot;email&quot;, &quot;No email&quot;)
+print(email)  # No email
+
+# Check if key exists
+if &quot;name&quot; in person:
+    print(&quot;Name exists&quot;)
+
+# Get all keys
+keys = person.keys()
+print(keys)  # dict_keys(['name', 'age', 'city'])
+
+# Get all values
+values = person.values()
+print(values)  # dict_values(['Bob', 25, 'New York'])
+
+# Get all items (key-value pairs)
+items = person.items()
+print(items)  # dict_items([('name', 'Bob'), ('age', 25), ('city', 'New York')])
+</div></section><section class="chapter"><h2 id="dict-looping" data-toc="dict-looping">Dict Looping</h2><div class="code-block" data-lang="python">
+student = {
+    &quot;name&quot;: &quot;Charlie&quot;,
+    &quot;age&quot;: 22,
+    &quot;major&quot;: &quot;Computer Science&quot;
+}
+
+# Loop through keys
+for key in student:
+    print(key)
+
+# Loop through values
+for value in student.values():
+    print(value)
+
+# Loop through key-value pairs
+for key, value in student.items():
+    print(f&quot;{key}: {value}&quot;)
+</div></section><section class="chapter"><h2 id="dict-practice" data-toc="dict-practice">Dict Practice</h2><div class="code-block" data-lang="python">
+# Create a dictionary of word counts
+text = &quot;hello world hello python world&quot;
+words = text.split()
+
+word_count = {}
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+print(word_count)  # {'hello': 2, 'world': 2, 'python': 1}
+
+# Using get() method (cleaner approach)
+word_count = {}
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+print(word_count)
+</div></section><section class="chapter"><h2 id="dict-remove" data-toc="dict-remove">Dict Remove</h2><div class="code-block" data-lang="python">
+person = {
+    &quot;name&quot;: &quot;David&quot;,
+    &quot;age&quot;: 30,
+    &quot;city&quot;: &quot;Boston&quot;,
+---
+
+## Input/Output
+
+### Reading Input
+```python
+# Get user input (always returns string)
+name = input(&quot;Enter your name: &quot;)
+print(f&quot;Hello, {name}!&quot;)
+
+# Input without prompt
+data = input()
+print(data)
+</div></section><div class="last-modified">05 January 2026</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="sets.html" class="navigation-links__prev">Sets</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.js"></script></body></html>

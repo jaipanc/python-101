@@ -1,0 +1,99 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2026-01-08T23:32:33.3556723"><title>Lists | Python 101</title><script type="application/json" id="virtual-toc-data">[{"id":"list-basics","level":0,"title":"List Basics","anchor":"#list-basics"},{"id":"list-methods","level":0,"title":"List Methods","anchor":"#list-methods"},{"id":"list-slicing","level":0,"title":"List Slicing","anchor":"#list-slicing"},{"id":"list-comprehensions","level":0,"title":"List Comprehensions","anchor":"#list-comprehensions"},{"id":"built-in-list-functions","level":0,"title":"Built-in List Functions","anchor":"#built-in-list-functions"},{"id":"looping-through-lists","level":0,"title":"Looping Through Lists","anchor":"#looping-through-lists"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="16x16" href="https://www.python.org/static/apple-touch-icon-144x144-precomposed.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Lists | Python 101"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python 101 Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/lists.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Lists | Python 101"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/lists.html#webpage",
+    "url": "writerside-documentation/lists.html",
+    "name": "Lists | Python 101",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Python 101 Help"
+}</script><!-- End Schema.org --></head><body data-id="Lists" data-main-title="Lists" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="📦-Data-Structures.md|📦 Data Structures"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python 101  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Lists" id="Lists.md">Lists</h1><section class="chapter"><h2 id="list-basics" data-toc="list-basics">List Basics</h2><div class="code-block" data-lang="python">
+# Creating lists
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, &quot;two&quot;, 3.0, True]
+empty = []
+
+# List length
+length = len(numbers)  # 5
+
+# Accessing elements
+first = numbers[0]   # 1
+last = numbers[-1]   # 5
+
+# Modifying elements (lists are mutable)
+numbers[0] = 10  # [10, 2, 3, 4, 5]
+</div></section><section class="chapter"><h2 id="list-methods" data-toc="list-methods">List Methods</h2><div class="code-block" data-lang="python">
+numbers = [1, 2, 3]
+
+# Add elements
+numbers.append(4)      # [1, 2, 3, 4]
+numbers.extend([5, 6]) # [1, 2, 3, 4, 5, 6]
+numbers.insert(0, 0)   # [0, 1, 2, 3, 4, 5, 6]
+
+# Remove elements
+numbers.pop()          # Removes and returns last element
+numbers.pop(0)         # Removes element at index 0
+numbers.remove(3)      # Removes first occurrence of 3
+numbers.clear()        # Removes all elements
+
+# Find elements
+index = numbers.index(3)  # Returns index of first 3
+count = numbers.count(2)  # Counts occurrences of 2
+
+# Check membership
+if 3 in numbers:
+    print(&quot;3 is in the list&quot;)
+
+# Sort and reverse
+numbers.sort()          # Sort in place (ascending)
+numbers.sort(reverse=True)  # Sort descending
+numbers.reverse()       # Reverse in place
+sorted_nums = sorted(numbers)  # Returns new sorted list
+</div></section><section class="chapter"><h2 id="list-slicing" data-toc="list-slicing">List Slicing</h2><div class="code-block" data-lang="python">
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Basic slicing
+numbers[2:5]    # [2, 3, 4]
+numbers[:5]     # [0, 1, 2, 3, 4]
+numbers[5:]     # [5, 6, 7, 8, 9]
+numbers[::2]    # [0, 2, 4, 6, 8]
+numbers[::-1]   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+# Last n elements
+numbers[-3:]    # [7, 8, 9]
+</div></section><section class="chapter"><h2 id="list-comprehensions" data-toc="list-comprehensions">List Comprehensions</h2><div class="code-block" data-lang="python">
+# Create list with loop
+squares = [x**2 for x in range(10)]
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# With condition
+evens = [x for x in range(10) if x % 2 == 0]
+# [0, 2, 4, 6, 8]
+
+# Nested comprehension
+matrix = [[i*j for j in range(3)] for i in range(3)]
+# [[0, 0, 0], [0, 1, 2], [0, 2, 4]]
+</div></section><section class="chapter"><h2 id="built-in-list-functions" data-toc="built-in-list-functions">Built-in List Functions</h2><div class="code-block" data-lang="python">
+numbers = [3, 1, 4, 1, 5, 9, 2, 6]
+
+sum(numbers)    # 31
+min(numbers)    # 1
+max(numbers)    # 9
+len(numbers)    # 8
+</div></section><section class="chapter"><h2 id="looping-through-lists" data-toc="looping-through-lists">Looping Through Lists</h2><div class="code-block" data-lang="python">
+fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
+
+# Loop with elements
+for fruit in fruits:
+    print(fruit)
+
+# Loop with index
+for i in range(len(fruits)):
+    print(f&quot;{i}: {fruits[i]}&quot;)
+</div></section><div class="last-modified">09 January 2026</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="strings.html" class="navigation-links__prev">Strings</a><a href="sets.html" class="navigation-links__next">Sets</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.js"></script></body></html>
