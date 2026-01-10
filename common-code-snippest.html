@@ -1,0 +1,121 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#1B9F8E"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2026-01-09T21:50:34.4006463"><title>&lt;/&gt; Common Code Snippet | Python 101</title><script type="application/json" id="virtual-toc-data">[{"id":"a-frequency-count","level":0,"title":"A) Frequency count","anchor":"#a-frequency-count"},{"id":"b-two-pointers","level":0,"title":"B) Two pointers","anchor":"#b-two-pointers"},{"id":"c-sliding-window-grow-shrink","level":0,"title":"C) Sliding window (grow/shrink)","anchor":"#c-sliding-window-grow-shrink"},{"id":"d-stack-valid-parentheses","level":0,"title":"D) Stack (valid parentheses)","anchor":"#d-stack-valid-parentheses"},{"id":"e-bfs-queue","level":0,"title":"E) BFS (queue)","anchor":"#e-bfs-queue"},{"id":"f-binary-search","level":0,"title":"F) Binary search","anchor":"#f-binary-search"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="16x16" href="https://www.python.org/static/apple-touch-icon-144x144-precomposed.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="&lt;/&gt; Common Code Snippet | Python 101"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Python 101 Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/common-code-snippest.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="&lt;/&gt; Common Code Snippet | Python 101"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/common-code-snippest.html#webpage",
+    "url": "writerside-documentation/common-code-snippest.html",
+    "name": "&lt;/&gt; Common Code Snippet | Python 101",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Python 101 Help"
+}</script><!-- End Schema.org --></head><body data-id="Common-Code-Snippest" data-main-title="&lt;/&gt; Common Code Snippet" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Python 101  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Common-Code-Snippest" id="Common-Code-Snippest.md">&lt;/&gt; Common Code Snippet</h1><p id="j31ome_3">C# vs Python pattern translation (side-by-side)</p><section class="chapter"><h2 id="a-frequency-count" data-toc="a-frequency-count">A) Frequency count</h2><p id="j31ome_10"><span class="control" id="j31ome_15">Python</span></p><div class="code-block" data-lang="python">
+freq = {}
+for x in arr:
+    freq[x] = freq.get(x, 0) + 1
+</div><p id="j31ome_12"><span class="control" id="j31ome_16">C#</span></p><div class="code-block" data-lang="none">
+var freq = new Dictionary&lt;int,int&gt;();
+foreach (var x in arr)
+{
+    freq[x] = freq.GetValueOrDefault(x, 0) + 1;
+}
+</div></section><section class="chapter"><h2 id="b-two-pointers" data-toc="b-two-pointers">B) Two pointers</h2><p id="j31ome_17"><span class="control" id="j31ome_22">Python</span></p><div class="code-block" data-lang="python">
+l, r = 0, len(arr) - 1
+while l &lt; r:
+    l += 1
+    r -= 1
+</div><p id="j31ome_19"><span class="control" id="j31ome_23">C#</span></p><div class="code-block" data-lang="none">
+int l = 0, r = arr.Length - 1;
+while (l &lt; r)
+{
+    l++;
+    r--;
+}
+</div></section><section class="chapter"><h2 id="c-sliding-window-grow-shrink" data-toc="c-sliding-window-grow-shrink">C) Sliding window (grow/shrink)</h2><p id="j31ome_24"><span class="control" id="j31ome_29">Python</span></p><div class="code-block" data-lang="python">
+start = 0
+for end in range(len(nums)):
+    # expand using nums[end]
+    while condition_not_met:
+        start += 1
+</div><p id="j31ome_26"><span class="control" id="j31ome_30">C#</span></p><div class="code-block" data-lang="none">
+int start = 0;
+for (int end = 0; end &lt; nums.Length; end++)
+{
+    // expand using nums[end]
+    while (conditionNotMet)
+    {
+        start++;
+    }
+}
+</div></section><section class="chapter"><h2 id="d-stack-valid-parentheses" data-toc="d-stack-valid-parentheses">D) Stack (valid parentheses)</h2><p id="j31ome_31"><span class="control" id="j31ome_36">Python</span></p><div class="code-block" data-lang="python">
+pairs = {')':'(', ']':'[', '}':'{'}
+stack = []
+for ch in s:
+    if ch in &quot;([{&quot;: stack.append(ch)
+    else:
+        if not stack or stack[-1] != pairs[ch]:
+            return False
+        stack.pop()
+return not stack
+</div><p id="j31ome_33"><span class="control" id="j31ome_37">C#</span></p><div class="code-block" data-lang="none">
+var pairs = new Dictionary&lt;char,char&gt; { {')','('}, {']','['}, {'}','{'} };
+var st = new Stack&lt;char&gt;();
+
+foreach (var ch in s)
+{
+    if (ch == '(' || ch == '[' || ch == '{') st.Push(ch);
+    else
+    {
+        if (st.Count == 0 || st.Peek() != pairs[ch]) return false;
+        st.Pop();
+    }
+}
+return st.Count == 0;
+</div></section><section class="chapter"><h2 id="e-bfs-queue" data-toc="e-bfs-queue">E) BFS (queue)</h2><p id="j31ome_38"><span class="control" id="j31ome_43">Python</span></p><div class="code-block" data-lang="python">
+from collections import deque
+q = deque([start])
+seen = {start}
+while q:
+    node = q.popleft()
+    for nei in graph[node]:
+        if nei not in seen:
+            seen.add(nei)
+            q.append(nei)
+</div><p id="j31ome_40"><span class="control" id="j31ome_44">C#</span></p><div class="code-block" data-lang="none">
+var q = new Queue&lt;int&gt;();
+var seen = new HashSet&lt;int&gt;();
+
+q.Enqueue(start);
+seen.Add(start);
+
+while (q.Count &gt; 0)
+{
+    int node = q.Dequeue();
+    foreach (var nei in graph[node])
+    {
+        if (seen.Add(nei))
+            q.Enqueue(nei);
+    }
+}
+</div></section><section class="chapter"><h2 id="f-binary-search" data-toc="f-binary-search">F) Binary search</h2><p id="j31ome_45"><span class="control" id="j31ome_49">Python</span></p><div class="code-block" data-lang="python">
+l, r = 0, len(arr) - 1
+while l &lt;= r:
+    m = (l + r) // 2
+    if arr[m] == target: return m
+    elif arr[m] &lt; target: l = m + 1
+    else: r = m - 1
+</div><p id="j31ome_47"><span class="control" id="j31ome_50">C#</span></p><div class="code-block" data-lang="none">
+int l = 0, r = arr.Length - 1;
+while (l &lt;= r)
+{
+    int m = l + (r - l) / 2;
+    if (arr[m] == target) return m;
+    if (arr[m] &lt; target) l = m + 1;
+    else r = m - 1;
+}
+return -1;
+</div></section><div class="last-modified">09 January 2026</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="dictionary.html" class="navigation-links__prev">{ : } Dictionary</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.25.3-b857/app.js"></script></body></html>
